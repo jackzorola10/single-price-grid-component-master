@@ -1,0 +1,78 @@
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;     /* Removes link-like view */
+        font-family: 'Karla', sans-serif;
+    } 
+    
+    body{
+        background-color:  hsl(204, 43%, 93%);
+    }
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+    .joinOur {
+        background-color: #FFFFFF;
+    }
+
+    h1 {
+        color: hsl(179, 62%, 43%) ;
+    }
+
+    .joinOur span {
+        color: hsl(71, 73%, 54%);
+        font-weight: 400;
+
+    }
+
+    .joinOur p {
+        color: hsl(179, 62%, 43%);
+        
+    }
+
+    .mSub {
+        background-color: hsl(179, 62%, 43%);
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .pMonth {
+        color: #E7EFF6 ;
+    }
+
+
+    .whyUs {
+        background-color: #49BFBD;
+    }
+
+    .price,  {
+    }
+
+    button {
+        color: #FFFFFF;
+        background-color: hsl(71, 73%, 54%);
+        border: 0;
+        height: 48px;
+        flex-grow: 1;
+        max-width: 264px;
+        border-radius: 5px;
+    }
+
+    h2 {
+        color: #FFFFFF;
+    }
+
+    ul {
+        color: #E7EFF6;
+    }
