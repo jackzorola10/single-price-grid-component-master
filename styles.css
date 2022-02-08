@@ -10,6 +10,8 @@
     
     body{
         background-color:  hsl(204, 43%, 93%);
+        margin: 4rem 2rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
 
     .attribution { 
@@ -20,59 +22,165 @@
         color: hsl(228, 45%, 44%); 
     }
 
+    footer{
+        position: absolute;
+        top:0px;
+    }
+
+
+    /* ######################################### */
+    /* ####### Join our community ####### */
+    /* ######################################### */
+
     .joinOur {
         background-color: #FFFFFF;
     }
 
     h1 {
-        color: hsl(179, 62%, 43%) ;
+        color: hsl(179, 62%, 43%);
+        margin-bottom: 2.25rem;
+        font-size: 1.25rem;
     }
 
     .joinOur span {
         color: hsl(71, 73%, 54%);
-        font-weight: 400;
+        font-weight: 700;
 
     }
 
     .joinOur p {
         color: hsl(179, 62%, 43%);
-        
+        margin-top: 2rem;
     }
+
+    /* ######################################### */
+    /* ####### Monthly Subscription ####### */
+    /* ######################################### */
 
     .mSub {
         background-color: hsl(179, 62%, 43%);
         color: #FFFFFF;
         display: flex;
         flex-direction: column;
+    }
 
+    .midSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .pMonth {
-        color: #E7EFF6 ;
+        color: #E7EFF6;
+        display: inline;
+        margin-left: .5rem;
     }
 
-
-    .whyUs {
-        background-color: #49BFBD;
+    .price  {
+        display: inline;
+        font-size: 2rem;
+        font-weight: 700;
     }
 
-    .price,  {
+    .mSub p {
+        margin: .5rem 0rem 1.75rem 0rem;
+        color: #E7EFF6;
     }
 
     button {
         color: #FFFFFF;
         background-color: hsl(71, 73%, 54%);
         border: 0;
-        height: 48px;
+        height: 3rem;
+        max-height: 3rem;
         flex-grow: 1;
-        max-width: 264px;
+        max-width: 16.5rem;
         border-radius: 5px;
+        font-size: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    button:hover{
+        background-color: hsl(71, 73%, 46%);
+    }
+
+    /* ######################################### */
+    /* ####### Why Us ####### */
+    /* ######################################### */
+
+    .whyUs {
+        background-color: #49BFBD;
     }
 
     h2 {
         color: #FFFFFF;
+        margin-bottom: 1.75rem;
+        font-size: 1.15rem;
     }
 
     ul {
         color: #E7EFF6;
+        line-height: 1.5rem;
     }
+
+    /* ######################################### */
+    /* ######################################### */
+    /* ####### Media Query Sensitives ####### */
+    /* ######################################### */
+    /* ######################################### */
+
+
+@media (max-width: 768px) {
+    body{
+        display: grid;
+        grid-template-areas: 
+        "joinOur"
+        "mSub"
+        "whyUs"
+        ;
+        grid-column: 1fr;
+    }
+    .joinOur{
+        grid-area: joinOur;
+         padding: 2.0rem 1.5rem 2.25rem 1.5rem; 
+         border-radius: 5px 5px 0 0 ;
+    }
+    .mSub {
+        grid-area: mSub;
+        padding: 1.875rem 1.5rem 1.5rem 1.5rem;
+    }
+    .whyUs{
+        grid-area: whyUs;
+        padding: 1.875rem 1.5rem;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    body{
+        display: grid;
+        grid-template-areas: 
+        "joinOur joinOur"
+        "mSub whyUs"
+        ;
+        grid-column: 1fr 1fr;
+        grid-row: 1fr 1fr;
+
+    }
+    .joinOur{
+        grid-area: joinOur;
+         padding: 2.0rem 2.4rem 2.25rem 2.4rem; 
+         border-radius: 5px 5px 0 0 ;
+    }
+    .mSub {
+        grid-area: mSub;
+        padding: 1.875rem 1.5rem 1.5rem 2.4rem;
+        border-radius: 0 0 0 5px;
+    }
+    .whyUs{
+        grid-area: whyUs;
+        padding: 1.875rem 2.4rem 1.875rem 1.5rem;
+        border-radius: 0 0 5px;
+
+    }
+}
